@@ -45,7 +45,9 @@ CREATE TABLE filme(
     NOT NULL
     DEFAULT 'Pendente_Adicao',
     id_produtora INT,
-    FOREIGN KEY (id_produtora) REFERENCES produtora (id_produtora)
+    FOREIGN KEY (id_produtora) REFERENCES produtora (id_produtora),
+	id_usuario INT,
+	FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
 );
 
 -- Criação da tabela Intermediaria Filme_Ator
